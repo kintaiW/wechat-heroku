@@ -6,4 +6,9 @@ class WechatControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  # test  "should do auth" do
+  #   get :auth
+  #
+  # end
+
 end
