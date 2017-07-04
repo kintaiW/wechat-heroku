@@ -8,6 +8,9 @@ class WechatController < ApplicationController
     end
   end
 
+  def create
+    render html: "post success"
+  end
   #接收微信服务器信息  
   # def process_request
   #   # if check_signature?(params[:signature], params[:timestamp], params[:nonce]) #验证消息真实性  
