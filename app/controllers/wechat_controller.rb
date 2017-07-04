@@ -19,7 +19,9 @@ class WechatController < ApplicationController
         render "wechat/info", layout: false, :formats => :xml  #用户输入消息时，回送欢迎关注  
       end
     end
-    private
+  end
+  
+  private
   def check_signature?(signature,timestamp,nonce)
     Digest::SHA1.hexdigest([timestamp,nonce,@@token].sort.join) == signature
   end
