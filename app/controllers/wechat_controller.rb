@@ -3,11 +3,18 @@ class WechatController < ApplicationController
   @@token = "wechat_auth"
   #URL验证
   def auth
+    # if check_signature?(params[:signature],params[:timestamp],params[:nonce])
+    #   return render text: params[:echostr]
+    # end
+    render html: "get auth success"
+  end
+
+  def index
     if check_signature?(params[:signature],params[:timestamp],params[:nonce])
       return render text: params[:echostr]
     end
   end
-
+  
   def create
     render html: "post success"
   end

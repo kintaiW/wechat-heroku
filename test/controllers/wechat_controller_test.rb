@@ -6,9 +6,10 @@ class WechatControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  # test  "should do auth" do
-  #   get :auth
-  #
-  # end
+  test  "should post auth" do
+    post :auth
+    assert_response :success
+    # assert_select "body","post success"
+  end
 
 end
